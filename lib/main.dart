@@ -1,43 +1,59 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MisIconosApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MisIconosApp extends StatelessWidget {
+  const MisIconosApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Karla Balderrama"),
+          titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
+          centerTitle: true,
+          backgroundColor: const Color(0xff3e6f87),
+        ),
+        body: const Column(
+          children: <Widget>[
+            Text(
+              "Karla Balderrama Mat:22308051281149",
+              style: TextStyle(fontSize: 18, color: Colors.black),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Icon(
+                  Icons.star,
+                  color: Color(0xffd2a920),
+                  size: 40.0,
+                  semanticLabel: 'Text to announce in accessibility modes',
+                ),
+                Icon(
+                  Icons.book,
+                  color: Color(0xff0d4674),
+                  size: 40.0,
+                ),
+                Icon(
+                  Icons.account_circle_rounded,
+                  color: Color(0xff02080e),
+                  size: 40.0,
+                ),
+                Icon(
+                  Icons.menu,
+                  color: Color(0xff13b45b),
+                  size: 40.0,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
-  }
-}
+  } //fin Widget
+} // fin clase MisIconosApp
